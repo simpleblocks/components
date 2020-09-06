@@ -1,0 +1,28 @@
+{
+  "name": "@simpleblocks/components",
+  "version": "0.0.1",
+  "description": "This repository contains a basic set of components for SimpleBlocks.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simpleblocks/components.git"
+  },
+  "keywords": [
+    "simpleblocks",
+    "components",
+    "javascript"
+  ],
+  "author": "Loïc Bellemare-Alford",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/simpleblocks/components/issues"
+  },
+  "homepage": "https://github.com/simpleblocks/components#readme",
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11"
+  }
+}
