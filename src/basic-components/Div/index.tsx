@@ -2,8 +2,9 @@ import React from "react"
 import { Div, DivCanvas } from "./component"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCube } from "@fortawesome/free-solid-svg-icons"
+import { BlockDefinition } from "../../../@types/components"
 
-export default {
+const Definition: BlockDefinition = {
   id: "div",
 
   // List definition
@@ -31,3 +32,5 @@ export default {
   requiredClassnames: [],
 
 }
+
+export default Definition
