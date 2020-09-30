@@ -1,4 +1,5 @@
 import React from "react"
+import { Components } from '../src/index';
 
 export type BlockDefinition = {
     id: String,
@@ -29,3 +30,5 @@ export type BlockProps = {
 }
 
 export type BlockType = (props: BlockProps, context?: any) => React.ReactNode
+
+export type Components = Components
