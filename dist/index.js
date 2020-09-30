@@ -37,50 +37,58 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getProps = exports.getDefaultProps = exports.getDefaultChildren = exports.getReactComponent = exports.getDefinition = exports.getComponentsDefinitions = exports.generateMap = exports.addComponents = void 0;
+exports.Components = void 0;
 var BasicComponents = __importStar(require("./basic-components"));
-var componentsList = [];
-var componentsMap = new Map();
-exports.addComponents = function (newComponents) {
-    componentsList = __spreadArrays(componentsList, newComponents);
-    exports.generateMap(componentsList);
-};
-exports.generateMap = function (list) {
-    list.map(function (component) {
-        componentsMap.set(component.id, component);
-    });
-};
-exports.getComponentsDefinitions = function () {
-    return componentsList.map(function (component) { return (__assign({ id: component.id }, component.definition)); });
-};
-exports.getDefinition = function (id) {
-    var component = componentsMap.get(id);
-    return component ? __assign({ id: id }, component.definition) : {};
-};
-exports.getReactComponent = function (id, isCanvas) {
-    var component = componentsMap.get(id);
-    if (!component)
-        return null;
-    return isCanvas ?
-        component.canvas :
-        component.component;
-};
-exports.getDefaultChildren = function (id) {
-    var component = componentsMap.get(id);
-    return component ? component.children : null;
-};
-exports.getDefaultProps = function (id) {
-    var props = {};
-    var component = componentsMap.get(id);
-    if (!component)
-        return null;
-    component.props.map(function (prop) { return props[prop.name] = prop.default; });
-    return props;
-};
-exports.getProps = function (id) {
-    var component = componentsMap.get(id);
-    return component ? component.props : {};
-};
-/* Initialize */
-exports.addComponents(BasicComponents.components);
+var Components = /** @class */ (function () {
+    function Components(components) {
+        var _this = this;
+        if (components === void 0) { components = []; }
+        this.componentsList = [];
+        this.componentsMap = new Map();
+        this.addComponents = function (newComponents) {
+            _this.componentsList = __spreadArrays(_this.componentsList, newComponents);
+            _this.generateMap(_this.componentsList);
+        };
+        this.generateMap = function (list) {
+            list.map(function (component) {
+                _this.componentsMap.set(component.id, component);
+            });
+        };
+        this.getComponentsDefinitions = function () {
+            return _this.componentsList.map(function (component) { return (__assign({ id: component.id }, component.definition)); });
+        };
+        this.getDefinition = function (id) {
+            var component = _this.componentsMap.get(id);
+            return component
+                ? __assign({ id: id }, component.definition) : {};
+        };
+        this.getReactComponent = function (id, isCanvas) {
+            var component = _this.componentsMap.get(id);
+            if (!component)
+                return null;
+            return isCanvas ? component.canvas : component.component;
+        };
+        this.getDefaultChildren = function (id) {
+            var component = _this.componentsMap.get(id);
+            return component ? component.children : null;
+        };
+        this.getDefaultProps = function (id) {
+            var props = {};
+            var component = _this.componentsMap.get(id);
+            if (!component)
+                return null;
+            component.props.map(function (prop) { return (props[prop.name] = prop.default); });
+            return props;
+        };
+        this.getProps = function (id) {
+            var component = _this.componentsMap.get(id);
+            return component ? component.props : {};
+        };
+        this.addComponents(BasicComponents.components);
+        if (components)
+            this.addComponents(components);
+    }
+    return Components;
+}());
+exports.Components = Components;
 //# sourceMappingURL=index.js.map
