@@ -1,7 +1,7 @@
 import * as BasicComponents from "./basic-components";
-import { BlockDefinition } from "../@types/components";
+import { BlockDefinition, ComponentsInstance, BlockDefDetails } from "../@types/components";
 
-export class Components {
+export class Components implements ComponentsInstance {
   componentsList: BlockDefinition[] = [];
   componentsMap: Map<String, BlockDefinition> = new Map();
 
@@ -25,7 +25,7 @@ export class Components {
     return this.componentsList.map((component) => ({
       id: component.id,
       ...component.definition,
-    }));
+    } as BlockDefDetails));
   };
 
   getDefinition = (id: String) => {
@@ -39,13 +39,13 @@ export class Components {
       : {};
   };
 
-  getReactComponent: React.ReactNode = (id: String, isCanvas: Boolean) => {
+  getReactComponent = (id: String, isCanvas: Boolean) => {
     const component = this.componentsMap.get(id);
     if (!component) return null;
     return isCanvas ? component.canvas : component.component;
   };
 
-  getDefaultChildren: React.ReactNode = (id: String) => {
+  getDefaultChildren = (id: String) => {
     const component = this.componentsMap.get(id);
     return component ? component.children : null;
   };
