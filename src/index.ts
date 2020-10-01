@@ -5,7 +5,7 @@ export class Components implements ComponentsInstance {
   componentsList: BlockDefinition[] = [];
   componentsMap: Map<String, BlockDefinition> = new Map();
 
-  constructor(components =[]) {
+  constructor(components: BlockDefinition[] = []) {
     this.addComponents(BasicComponents.components);
     if (components) this.addComponents(components)
   }
