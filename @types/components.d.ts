@@ -16,7 +16,7 @@ export type BlockDefinition = {
     props: [],
     component: React.ReactNode,
     canvas: React.ReactNode,
-    children: React.ReactNode,
+    children: String[],
     listenToContext?: Boolean,
   
     // Styling
