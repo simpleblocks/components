@@ -2,7 +2,7 @@ import React from "react"
 import { Div, DivCanvas } from "./component"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCube } from "@fortawesome/free-solid-svg-icons"
-import { BlockDefinition } from "../../../@types/components"
+import { BlockDefinition } from "../../../@types/components.def"
 
 const Definition: BlockDefinition = {
   id: "div",

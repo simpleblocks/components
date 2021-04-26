@@ -1,8 +1,10 @@
 import Div from "./Div"
-import { BlockDefinition } from "../../@types/components"
+import Text from "./Text"
+import { BlockDefinition } from "../../@types/components.def"
 
 export const name = "basic-components"
 
 export const components: BlockDefinition[] = [
   Div,
+  Text
 ]
