@@ -4844,8 +4844,8 @@ var components = [
     Definition
 ];
 
-var Components = /** @class */ (function () {
-    function Components(components$1) {
+var ComponentsManager = /** @class */ (function () {
+    function ComponentsManager(components$1) {
         var _this = this;
         if (components$1 === void 0) { components$1 = []; }
         this.componentsList = [];
@@ -4893,9 +4893,9 @@ var Components = /** @class */ (function () {
         if (components$1)
             this.addComponents(components$1);
     }
-    return Components;
+    return ComponentsManager;
 }());
 
-exports.Components = Components;
-exports.default = Components;
+exports.ComponentsManager = ComponentsManager;
+exports.default = ComponentsManager;
 //# sourceMappingURL=index.js.map

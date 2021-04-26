@@ -1,7 +1,7 @@
 import * as BasicComponents from "./basic-components";
 import { BlockDefinition, ComponentsInstance, BlockDefDetails } from "../@types/components";
 
-export class Components implements ComponentsInstance {
+export class ComponentsManager implements ComponentsInstance {
   componentsList: BlockDefinition[] = [];
   componentsMap: Map<String, BlockDefinition> = new Map();
 
@@ -64,4 +64,4 @@ export class Components implements ComponentsInstance {
   };
 }
 
-export default Components;
+export default ComponentsManager;

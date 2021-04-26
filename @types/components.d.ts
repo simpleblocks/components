@@ -47,7 +47,7 @@ export interface ComponentsInstance {
   getProps: (id: String) => Object
 }
 
-export declare class Components implements ComponentsInstance {
+export declare class ComponentsManager implements ComponentsInstance {
   componentsList: BlockDefinition[];
   componentsMap: Map<String, BlockDefinition>;
   constructor(components?: BlockDefinition[]);
@@ -60,4 +60,4 @@ export declare class Components implements ComponentsInstance {
   getDefaultProps: (id: String) => any;
   getProps: (id: String) => {};
 }
-export default Components;
+export default ComponentsManager;
