@@ -1,5 +1,5 @@
 import * as BasicComponents from "./basic-components";
-import { BlockDefinition, ComponentsInstance, BlockDefDetails } from "../@types/components.def";
+import { BlockDefinition, ComponentsInstance, BlockDefDetails } from "../@types/components";
 
 export class Components implements ComponentsInstance {
   componentsList: BlockDefinition[] = [];
@@ -63,3 +63,5 @@ export class Components implements ComponentsInstance {
     return component ? component.props : {};
   };
 }
+
+export default Components;

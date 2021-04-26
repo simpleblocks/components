@@ -1,6 +1,6 @@
 import React from "react"
 // import BlockSelector from "../../templates/components/BlockSelector"
-import { BlockType } from "../../../@types/components.def"
+import { BlockType } from "../../../@types/components"
 
 export const Text: BlockType = ({ stateProps, htmlProps, children }) => {
   return <div {...htmlProps}>{children}</div>

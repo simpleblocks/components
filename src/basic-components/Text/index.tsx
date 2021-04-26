@@ -2,7 +2,7 @@ import React from "react"
 import { Text, TextCanvas } from "./component"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCube } from "@fortawesome/free-solid-svg-icons"
-import { BlockDefinition } from "../../../@types/components.def"
+import { BlockDefinition } from "../../../@types/components"
 
 const Definition: BlockDefinition = {
   id: "text",

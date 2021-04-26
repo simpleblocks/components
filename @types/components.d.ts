@@ -1,6 +1,4 @@
 import React from "react"
-import { Components } from '../src/index';
-
 
 export type ListDefinition = {
   category: String,
@@ -19,11 +17,11 @@ export type BlockDefinition = {
     component: React.ReactNode,
     canvas: React.ReactNode,
     children: React.ReactNode,
-    listenToContext: Boolean?,
+    listenToContext?: Boolean,
   
     // Styling
     defaultStyles: Object,
-    requiredClassnames: String[]?,
+    requiredClassnames?: String[],
   }
 
 export type BlockProps = {

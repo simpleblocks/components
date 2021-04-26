@@ -1,6 +1,6 @@
 import Div from "./Div"
 import Text from "./Text"
-import { BlockDefinition } from "../../@types/components.def"
+import { BlockDefinition } from "../../@types/components"
 
 export const name = "basic-components"
 
