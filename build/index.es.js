@@ -4802,8 +4802,8 @@ var Definition$1 = {
 };
 
 var Text = function (_a) {
-    _a.stateProps; var htmlProps = _a.htmlProps, children = _a.children;
-    return react.createElement("div", __assign({}, htmlProps), children);
+    var stateProps = _a.stateProps, htmlProps = _a.htmlProps; _a.children;
+    return react.createElement("div", __assign({}, htmlProps), stateProps.text);
 };
 var TextCanvas = function (_a) {
     var stateProps = _a.stateProps, htmlProps = _a.htmlProps; _a.children;

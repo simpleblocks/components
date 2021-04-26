@@ -3,7 +3,7 @@ import React from "react"
 import { BlockType } from "../../../@types/components"
 
 export const Text: BlockType = ({ stateProps, htmlProps, children }) => {
-  return <div {...htmlProps}>{children}</div>
+  return <div {...htmlProps}>{stateProps.text}</div>
 }
 
 export const TextCanvas: BlockType = ({ stateProps, htmlProps, children }) => {
