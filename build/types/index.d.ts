@@ -1,4 +1,4 @@
-import { BlockDefinition, ComponentsInstance, BlockDefDetails } from "../@types/components";
+import { BlockDefinition, ComponentsInstance, BlockDefDetails, BlockType } from "../@types/components";
 export declare class ComponentsManager implements ComponentsInstance {
     componentsList: BlockDefinition[];
     componentsMap: Map<String, BlockDefinition>;
@@ -7,9 +7,8 @@ export declare class ComponentsManager implements ComponentsInstance {
     generateMap: (list: BlockDefinition[]) => void;
     getComponentsDefinitions: () => BlockDefDetails[];
     getDefinition: (id: String) => {};
-    getReactComponent: (id: String, isCanvas: Boolean) => {} | null | undefined;
+    getReactComponent: (id: String, isCanvas: Boolean) => BlockType | null;
     getDefaultChildren: (id: String) => String[] | null;
     getDefaultProps: (id: String) => any;
     getProps: (id: String) => {};
 }
-export default ComponentsManager;

@@ -14,8 +14,8 @@ export type BlockDefinition = {
   
     // Rendering
     props: [],
-    component: React.ReactNode,
-    canvas: React.ReactNode,
+    component: BlockType,
+    canvas: BlockType,
     children: String[],
     listenToContext?: Boolean,
   
@@ -41,7 +41,7 @@ export interface ComponentsInstance {
   generateMap: (list: BlockDefinition[]) => void,
   getComponentsDefinitions: () => BlockDefDetails[],
   getDefinition: (id: String) => BlockDefDetails,
-  getReactComponent: (id: String, isCanvas: Boolean) => React.ReactNode,
+  getReactComponent: (id: String, isCanvas: Boolean) => BlockType | null,
   getDefaultChildren: (id: String) => React.ReactNode,
   getDefaultProps: (id: String) => Object | null,
   getProps: (id: String) => Object
@@ -55,7 +55,7 @@ export declare class ComponentsManager implements ComponentsInstance {
   generateMap: (list: BlockDefinition[]) => void;
   getComponentsDefinitions: () => BlockDefDetails[];
   getDefinition: (id: String) => {};
-  getReactComponent: (id: String, isCanvas: Boolean) => {} | null | undefined;
+  getReactComponent: (id: String, isCanvas: Boolean) => BlockType | null;
   getDefaultChildren: (id: String) => {} | null | undefined;
   getDefaultProps: (id: String) => any;
   getProps: (id: String) => {};

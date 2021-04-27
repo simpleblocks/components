@@ -4897,5 +4897,4 @@ var ComponentsManager = /** @class */ (function () {
 }());
 
 exports.ComponentsManager = ComponentsManager;
-exports.default = ComponentsManager;
 //# sourceMappingURL=index.js.map

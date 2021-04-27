@@ -3,7 +3,7 @@
   "version": "0.0.10",
   "description": "This repository contains a basic set of components for SimpleBlocks.",
   "main": "build/index.js",
-  "module": "build/index.es.js",
+  "types": "build/types",
   "scripts": {
     "dev": "parcel src/index.ts",
     "clean": "rm -rf build",

@@ -21,11 +21,11 @@ export default {
       format: 'cjs', // commonJS
       sourcemap: true,
     },
-    {
-      file: packageJson.module,
-      format: 'esm', // ES Modules
-      sourcemap: true,
-    },
+    // {
+    //   file: packageJson.module,
+    //   format: 'esm', // ES Modules
+    //   sourcemap: true,
+    // },
   ],
   plugins: [
     peerDepsExternal(),

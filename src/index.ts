@@ -1,5 +1,5 @@
 import * as BasicComponents from "./basic-components";
-import { BlockDefinition, ComponentsInstance, BlockDefDetails } from "../@types/components";
+import { BlockDefinition, ComponentsInstance, BlockDefDetails, BlockType } from "../@types/components";
 
 export class ComponentsManager implements ComponentsInstance {
   componentsList: BlockDefinition[] = [];
@@ -39,7 +39,7 @@ export class ComponentsManager implements ComponentsInstance {
       : {};
   };
 
-  getReactComponent = (id: String, isCanvas: Boolean) => {
+  getReactComponent = (id: String, isCanvas: Boolean): BlockType | null => {
     const component = this.componentsMap.get(id);
     if (!component) return null;
     return isCanvas ? component.canvas : component.component;
@@ -63,5 +63,3 @@ export class ComponentsManager implements ComponentsInstance {
     return component ? component.props : {};
   };
 }
-
-export default ComponentsManager;
